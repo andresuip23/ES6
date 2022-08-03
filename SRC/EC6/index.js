@@ -171,5 +171,19 @@ import{hello} from './module';
 hello();
 
 
+// generators
 
 
+function* helloWorld(){
+    if(true){
+        yield 'hello, ';
+    }
+    if(true){
+        yield ' World';
+    }
+};
+
+const generatorhello= helloWorld();
+console.log(generatorhello.next().value);
+console.log(generatorhello.next().value);
+console.log(generatorhello.next().value);
